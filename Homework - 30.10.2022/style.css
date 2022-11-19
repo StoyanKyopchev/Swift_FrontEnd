@@ -1,0 +1,539 @@
+@font-face {
+  font-family: "Custom font";
+  src: url("Fonts/D-DIN.woff") format("woff"), url("Fonts/D-DIN.woff2") format("woff2");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Custom font";
+  src: url("Fonts/D-DIN-Bold.woff") format("woff"), url("Fonts/D-DIN-Bold.woff2") format("woff2");
+  font-weight: 700;
+}
+body {
+  color: white;
+  margin: 0;
+  font-family: Custom font;
+}
+body a {
+  text-decoration: none;
+  color: white;
+}
+h1 {
+  font-size: 6.25em;
+  margin: 0;
+}
+h2 {
+  font-size: 1.25em;
+  margin-top: 15px;
+}
+.first-page-wrapper {
+  background-image: url("Images/Hero.webp");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100%;
+  background-repeat: no-repeat;
+  position: relative;
+}
+header {
+  padding: 1.4% 1.5% 0 15.5%;
+  position: fixed;
+  width: 100%;
+  background-color: #00000075;
+  z-index: 2;
+}
+.fill-white {
+  fill: white;
+}
+/* Navigation */
+.logo {
+  width: 215px;
+  display: inline-block;
+}
+#navigation {
+  display: inline-block;
+  margin-left: 1.75%;
+}
+#navigation a {
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+  position: relative;
+}
+#navigation a::after {
+  content: "";
+  width: 0%;
+  height: 1px;
+  position: absolute;
+  top: 130%;
+  left: 0;
+  background-color: transparent;
+  transition: all 0.2s linear;
+}
+#navigation a:hover::after {
+  width: 100%;
+  background-color: white;
+}
+#navigation ul {
+  padding-left: 0px;
+}
+#navigation li {
+  list-style-type: none;
+  display: inline;
+  margin: 0 12px;
+}
+#navigation li:first-child {
+  margin-left: 0;
+}
+.header-shop {
+  display: inline-block;
+  position: absolute;
+  left: 79.6%;
+  top: 57%;
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+}
+/* Hamburger menu */
+#toggle {
+  display: none;
+}
+#hamburger-menu {
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  left: 82.5%;
+  top: 57%;
+  cursor: pointer;
+  z-index: 1;
+}
+#hamburger-menu div {
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  margin: 2px 0;
+  position: relative;
+  transition: all 0.2s linear;
+}
+#hamburger-menu-background {
+  position: fixed;
+  left: 81.5%;
+  top: 0;
+  width: 18.5%;
+  height: 100%;
+  background-color: black;
+  transform: scale(0);
+  transition: all 0.5s ease-in;
+}
+#hamburger-menu-navigation {
+  position: relative;
+  height: 100%;
+  width: 81%;
+  overflow: hidden;
+  left: 5%;
+  top: 6%;
+}
+#hamburger-menu-navigation nav {
+  text-align: right;
+}
+#hamburger-menu-navigation nav a {
+  display: block;
+  text-decoration: none;
+  color: white;
+  border-bottom: 1px solid #61616187;
+  padding: 4.8% 0;
+  font-size: 1em;
+}
+#hamburger-menu-navigation nav a:hover {
+  color: #9b9b9b;
+}
+#hamburger-menu-navigation ul li {
+  list-style-type: none;
+}
+#toggle:checked + #hamburger-menu .hamburger-top {
+  transform: rotate(-45deg);
+  top: 27%;
+}
+#toggle:checked + #hamburger-menu .hamburger-middle {
+  transform: rotate(45deg);
+  top: 3%;
+}
+#toggle:checked + #hamburger-menu .hamburger-bottom {
+  transform: rotate(45deg);
+  top: -21%;
+}
+#toggle:checked + #hamburger-menu + #hamburger-menu-background {
+  transform: scale(1);
+}
+.first-page-inner-content {
+  text-align: center;
+  position: relative;
+  top: 36%;
+}
+/* Second page */
+.second-page-wrapper {
+  background-image: url("Images/Rocket\ schematics.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  height: 100vh;
+  width: 100%;
+}
+.statistics table {
+  width: 72.5%;
+  text-align: center;
+  position: relative;
+  left: 13.5%;
+  padding-top: 3.25%;
+}
+.statistics th {
+  font-size: 8.75em;
+}
+.statistics td {
+  font-size: 1.25em;
+}
+.inner-text {
+  display: inline-block;
+  position: relative;
+  left: 16%;
+  top: 44%;
+  font-weight: 400;
+  font-size: 1.2em;
+  line-height: 2em;
+}
+/* Third page */
+#third-page-wrapper {
+  background-image: url("Images/White\ rocket.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  height: 100vh;
+  width: 100%;
+}
+.rocket-stats {
+  width: 27.5%;
+  position: relative;
+  left: 16%;
+  top: 26.5%;
+}
+.rocket-stats h2 {
+  font-size: 3em;
+  margin: 1% 0 5% 0;
+}
+.rocket-stats h3 {
+  margin: 0;
+}
+.rocket-stats table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95em;
+}
+.rocket-stats td {
+  padding: 4% 0;
+}
+.rocket-stats td:nth-child(2) {
+  text-align: right;
+}
+.rocket-stats tr {
+  border-bottom: 1px solid #82808087;
+}
+.US-units {
+  color: #959595;
+}
+.dot-links-wrapper {
+  display: inline-block;
+  width: 20%;
+  position: absolute;
+  left: 47.5%;
+  top: 94%;
+}
+.dot-links {
+  font-size: 1em;
+  text-decoration: none;
+  cursor: pointer;
+  margin-left: 1.5%;
+  color: #b4b4b4;
+}
+.third-page-prevbtn {
+  font-size: 3em;
+  margin-left: 3%;
+  background-color: transparent;
+  position: relative;
+  top: 44%;
+  cursor: pointer;
+  text-decoration: none;
+  color: #82808087;
+}
+.third-page-nextbtn {
+  font-size: 3em;
+  margin-right: 3%;
+  background-color: transparent;
+  position: relative;
+  top: 44%;
+  left: 91.5%;
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+}
+/* Fourth page */
+#fourth-page-wrapper {
+  background-image: url("Images/video-thumbnail.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  height: 100vh;
+  width: 100%;
+}
+.fourth-page-inner-wrapper {
+  display: inline-block;
+  position: relative;
+  left: 13.4%;
+  top: 73%;
+}
+.fourth-page-inner-wrapper h4 {
+  font-size: 1.25em;
+  margin-bottom: 4%;
+}
+.fourth-page-inner-wrapper h2 {
+  font-size: 3em;
+  margin-top: 0;
+}
+.play-button {
+  position: relative;
+  left: 49.25%;
+  top: 39%;
+  width: 1%;
+  height: 1%;
+  border-width: 19px 0px 19px 30px;
+  border-style: solid;
+  border-color: transparent transparent transparent white;
+  background-color: transparent;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+/* Fifth page - Merlin sea level*/
+#fifth-page-wrapper {
+  background-image: url("Images/Merlin/Merlin-sea-level.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  height: 100vh;
+  width: 100%;
+}
+.merlin-sea-level-wrapper {
+  width: 27%;
+  display: inline-block;
+  position: relative;
+  left: 15.75%;
+  top: 12%;
+}
+.merlin-sea-level-wrapper h2 {
+  margin: 3% 0 10% 0;
+  font-size: 2.95em;
+}
+.merlin-sea-level-wrapper p {
+  margin-bottom: 0;
+  line-height: 1.85em;
+}
+.inner-nav-merlin {
+  display: block;
+  margin-bottom: 7%;
+}
+.inner-nav-merlin a {
+  font-size: 1.15em;
+  text-decoration: none;
+  color: #8a8888;
+  padding: 0 3%;
+}
+.inner-nav-merlin a:first-child {
+  padding-left: 0;
+}
+.inner-nav-merlin a:not(:nth-child(2)) {
+  border-right: 1px solid #8a8888;
+}
+.inner-nav-merlin a:hover {
+  color: white;
+}
+.inner-nav-merlin a:active {
+  text-decoration: underline;
+  color: white;
+}
+.main-pages-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1em;
+  margin-top: 6%;
+}
+.main-pages-table td {
+  padding: 4% 0;
+  font-size: 0.875em;
+}
+.main-pages-table td:nth-child(2) {
+  text-align: right;
+  font-size: 0.975em;
+}
+.main-pages-table tr {
+  border-bottom: 1px solid #82808087;
+}
+/* Fifth page - Merlin vacuum*/
+.inner-content-merlin-vacuum {
+  background-image: url("Images/Merlin/Merlin-vacuum.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  height: 100vh;
+  width: 100%;
+}
+.merlin-vacuum-wrapper {
+  width: 27%;
+  display: inline-block;
+  position: relative;
+  left: 15.75%;
+  top: 12%;
+}
+.merlin-vacuum-wrapper h2 {
+  margin: 3% 0 10% 0;
+  font-size: 2.95em;
+}
+.merlin-vacuum-wrapper p {
+  margin-bottom: 0;
+  line-height: 1.85em;
+}
+/* Sixth page - gallery */
+.sixth-page-wrapper {
+  background-image: url("Images/rocket launch.webp");
+  background-size: cover;
+  background-position: center top 41%;
+  background-repeat: no-repeat;
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  z-index: -1;
+}
+.sixth-page-wrapper > a {
+  top: 92%;
+}
+.sixth-page-wrapper > a.third-page-prevbtn {
+  color: white;
+}
+.sixth-page-inner-content {
+  width: 100%;
+  height: 10.7vh;
+  background-color: black;
+  position: absolute;
+  top: 89.25%;
+}
+.sixth-page-inner-text {
+  background-color: black;
+  position: relative;
+  display: inline-block;
+  font-size: 0.9em;
+  left: 36.5%;
+  top: 29%;
+}
+/* Seventh page - pre-footer */
+.seventh-page-wrapper {
+  width: 100%;
+  height: 48vh;
+  background-color: black;
+  text-align: center;
+}
+.seventh-page-inner-center {
+  display: inline-block;
+  width: 73.5%;
+  height: 60%;
+  text-align: center;
+  position: relative;
+  top: 16%;
+}
+.seventh-page-inner-center p {
+  font-size: 0.85em;
+  color: #696969;
+}
+.seventh-page-inner-center a.email-link {
+  text-decoration: none;
+  color: #b8b8b8;
+}
+.seventh-page-inner-center a.email-link:hover {
+  color: #9b9b9b;
+}
+.seventh-page-inner-center a.button-links:last-child {
+  margin-left: 1.5%;
+}
+.white-bar {
+  background-color: black;
+  width: 10%;
+  height: 50.175%;
+  border-right: 1px solid white;
+  display: inline-block;
+  position: relative;
+  left: -5%;
+  margin-bottom: 1.75%;
+}
+.button-links {
+  display: inline-block;
+  position: relative;
+  height: 4%;
+  border: 2px solid white;
+  text-decoration: none;
+  font-size: 0.87em;
+  color: white;
+  padding: 1.4% 1.15%;
+  margin-top: 1.2%;
+  z-index: 1;
+}
+.button-links:hover {
+  color: black;
+}
+.button-links:hover .button-links-animation {
+  background-color: white;
+  height: 100%;
+}
+.button-links .button-links-animation {
+  position: absolute;
+  width: 100%;
+  height: 0;
+  background-color: transparent;
+  left: 0;
+  bottom: 0;
+  transition: all 0.3s linear;
+  z-index: -1;
+}
+/* Footer */
+.footer-wrapper {
+  background-color: black;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  padding-top: 1%;
+}
+.footer-navigation {
+  width: 80%;
+  display: inline-block;
+  margin-bottom: 1.2%;
+  position: relative;
+  left: -1%;
+}
+.footer-navigation a {
+  text-decoration: none;
+  color: white;
+}
+.footer-navigation a:hover {
+  color: #9b9b9b;
+}
+.footer-navigation ul {
+  margin-top: 0;
+}
+.footer-navigation li {
+  list-style-type: none;
+  display: inline-block;
+  margin: 0% 1.4%;
+  font-size: 0.75em;
+}
+.footer-navigation li:first-child {
+  color: #696969;
+}

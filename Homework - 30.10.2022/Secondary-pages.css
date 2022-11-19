@@ -1,0 +1,473 @@
+@font-face {
+  font-family: "Custom font";
+  src: url("Fonts/D-DIN.woff") format("woff"), url("Fonts/D-DIN.woff2") format("woff2");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Custom font";
+  src: url("Fonts/D-DIN-Bold.woff") format("woff"), url("Fonts/D-DIN-Bold.woff2") format("woff2");
+  font-weight: 700;
+}
+body {
+  margin: 0;
+  font-family: Custom font;
+  color: white;
+}
+p {
+  font-weight: 400;
+  line-height: 1.85em;
+  font-size: 1em;
+}
+h2 {
+  font-size: 2.95em;
+  margin: 3.5% 0 12.5% 0;
+}
+h3 {
+  font-size: 1.25em;
+  margin: 0;
+}
+header {
+  padding: 1.4% 1.5% 0 15.5%;
+  position: fixed;
+  width: 100%;
+  background-color: #00000075;
+  z-index: 2;
+}
+.fill-white {
+  fill: white;
+}
+/* Navigation */
+.logo {
+  width: 215px;
+  display: inline-block;
+}
+#navigation {
+  display: inline-block;
+  margin-left: 1.75%;
+}
+#navigation a {
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+  position: relative;
+}
+#navigation a::after {
+  content: "";
+  width: 0%;
+  height: 1px;
+  position: absolute;
+  top: 130%;
+  left: 0;
+  background-color: transparent;
+  transition: all 0.2s linear;
+}
+#navigation a:hover::after {
+  width: 100%;
+  background-color: white;
+}
+#navigation ul {
+  padding-left: 0px;
+}
+#navigation li {
+  list-style-type: none;
+  display: inline;
+  margin: 0 12px;
+}
+#navigation li:first-child {
+  margin-left: 0;
+}
+.header-shop {
+  display: inline-block;
+  position: absolute;
+  left: 79.6%;
+  top: 57%;
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+}
+/* Hamburger menu */
+#toggle {
+  display: none;
+}
+#hamburger-menu {
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  left: 82.5%;
+  top: 57%;
+  cursor: pointer;
+  z-index: 1;
+}
+#hamburger-menu div {
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  margin: 2px 0;
+  position: relative;
+  transition: all 0.2s linear;
+}
+#hamburger-menu-background {
+  position: fixed;
+  left: 81.5%;
+  top: 0;
+  width: 18.5%;
+  height: 100%;
+  background-color: black;
+  transform: scale(0);
+  transition: all 0.5s ease-in;
+}
+#hamburger-menu-navigation {
+  position: relative;
+  height: 100%;
+  width: 81%;
+  overflow: hidden;
+  left: 5%;
+  top: 6%;
+}
+#hamburger-menu-navigation nav {
+  text-align: right;
+}
+#hamburger-menu-navigation nav a {
+  display: block;
+  text-decoration: none;
+  color: white;
+  border-bottom: 1px solid #61616187;
+  padding: 4.8% 0;
+  font-size: 1em;
+}
+#hamburger-menu-navigation nav a:hover {
+  color: #9b9b9b;
+}
+#hamburger-menu-navigation ul li {
+  list-style-type: none;
+}
+#toggle:checked + #hamburger-menu .hamburger-top {
+  transform: rotate(-45deg);
+  top: 27%;
+}
+#toggle:checked + #hamburger-menu .hamburger-middle {
+  transform: rotate(45deg);
+  top: 3%;
+}
+#toggle:checked + #hamburger-menu .hamburger-bottom {
+  transform: rotate(45deg);
+  top: -21%;
+}
+#toggle:checked + #hamburger-menu + #hamburger-menu-background {
+  transform: scale(1);
+}
+/* First stage - Overview */
+.inner-content {
+  background-image: url("Images/First-stage/First-stage-overview.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+.overview-wrapper {
+  display: inline-block;
+  position: relative;
+  left: 15.75%;
+  top: 31.5%;
+}
+.inner-nav {
+  display: block;
+  margin-bottom: 8.5%;
+}
+.inner-nav a {
+  font-size: 1.15em;
+  text-decoration: none;
+  color: #8b8989;
+  padding: 0 3%;
+}
+.inner-nav a:first-child {
+  padding-left: 0;
+}
+.inner-nav a:not(:nth-child(3)) {
+  border-right: 1px solid #8b8989;
+}
+.inner-nav a:hover {
+  color: white;
+}
+.inner-nav a:active {
+  color: white;
+  text-decoration: underline;
+}
+.dot-links-wrapper {
+  display: inline-block;
+  width: 20%;
+  position: absolute;
+  left: 47.5%;
+  top: 94%;
+}
+.dot-links {
+  font-size: 1em;
+  text-decoration: none;
+  cursor: pointer;
+  margin-left: 1.5%;
+  color: #b4b4b4;
+}
+.third-page-prevbtn {
+  font-size: 3em;
+  background-color: transparent;
+  position: fixed;
+  top: 92%;
+  left: 2.75%;
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+}
+.third-page-nextbtn {
+  font-size: 3em;
+  background-color: transparent;
+  position: fixed;
+  top: 92%;
+  left: 95.5%;
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+}
+/* First stage - Engines */
+.inner-content-engines {
+  background-image: url("Images/First-stage/First-stage-engines.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+.engines-wrapper {
+  width: 27%;
+  display: inline-block;
+  position: relative;
+  left: 15.75%;
+  top: 20%;
+}
+.engines-wrapper h2 {
+  margin: 3% 0 10% 0;
+}
+.inner-nav-engines {
+  display: block;
+  margin-bottom: 7%;
+}
+.inner-nav-engines a {
+  font-size: 1.15em;
+  text-decoration: none;
+  color: #8b8989;
+  padding: 0 3%;
+}
+.inner-nav-engines a:first-child {
+  padding-left: 0;
+}
+.inner-nav-engines a:not(:nth-child(3)) {
+  border-right: 1px solid #8b8989;
+}
+.inner-nav-engines a:hover {
+  color: white;
+}
+.inner-nav-engines a:active {
+  color: white;
+  text-decoration: underline;
+}
+.secondary-pages-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1em;
+  margin-top: 6%;
+}
+.secondary-pages-table td {
+  padding: 4% 0;
+  font-size: 0.875em;
+}
+.secondary-pages-table td:nth-child(2) {
+  text-align: right;
+  font-size: 0.975em;
+}
+.secondary-pages-table tr {
+  border-bottom: 1px solid #82808087;
+}
+.US-units {
+  color: #959595;
+}
+/* First stage - Landing legs */
+.inner-content-landing-legs {
+  background-image: url("Images/First-stage/First-stage-landing-legs.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+.landing-legs-wrapper {
+  display: inline-block;
+  position: relative;
+  left: 15.75%;
+  top: 27.5%;
+}
+.landing-legs-wrapper > a {
+  text-decoration: none;
+  color: white;
+  display: inline-block;
+  margin-top: 1.5%;
+}
+/* Second stage */
+.inner-content-second-stage {
+  background-image: url("Images/Second stage.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+.second-stage-wrapper {
+  width: 27%;
+  display: inline-block;
+  position: relative;
+  left: 15.75%;
+  top: 26.5%;
+}
+.second-stage-wrapper h2 {
+  margin: 3% 0 4% 0;
+}
+/* Interstage */
+.inner-content-interstage {
+  background-image: url("Images/Interstage.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+.interstage-wrapper {
+  display: inline-block;
+  position: relative;
+  left: 15.75%;
+  top: 31.5%;
+}
+.interstage-wrapper h2 {
+  margin: 3% 0 5% 0;
+}
+.interstage-wrapper h4 {
+  font-size: 1.2em;
+  margin: 5% 0;
+}
+/* Payload */
+.inner-content-payload-fairing {
+  background-image: url("Images/Payload/Payload-fairing.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+.payload-fairing-wrapper {
+  width: 27%;
+  display: inline-block;
+  position: relative;
+  left: 15.75%;
+  top: 26.5%;
+}
+.payload-fairing-wrapper h2 {
+  margin: 3% 0 10% 0;
+}
+.payload-fairing-wrapper p {
+  margin-bottom: 0;
+}
+.inner-nav-payload {
+  display: block;
+  margin-bottom: 7%;
+}
+.inner-nav-payload a {
+  font-size: 1.15em;
+  text-decoration: none;
+  color: #8b8989;
+  padding: 0 3%;
+}
+.inner-nav-payload a:first-child {
+  padding-left: 0;
+}
+.inner-nav-payload a:not(:nth-child(2)) {
+  border-right: 1px solid #8b8989;
+}
+.inner-nav-payload a:hover {
+  color: white;
+}
+.inner-nav-payload a:active {
+  color: white;
+  text-decoration: underline;
+}
+.inner-content-payload-dragon {
+  background-image: url("Images/Payload/Payload-dragon.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+.payload-dragon-wrapper {
+  width: 27%;
+  display: inline-block;
+  position: relative;
+  left: 15.75%;
+  top: 24.5%;
+}
+.payload-dragon-wrapper h2 {
+  margin: 2.5% 0 10% 0;
+}
+.payload-dragon-wrapper p {
+  margin-bottom: 0;
+}
+.payload-dragon-wrapper > a {
+  text-decoration: none;
+  color: white;
+  display: inline-block;
+  margin-top: 4%;
+}
+/* Video Page */
+.video-page-wrapper {
+  height: 100vh;
+  width: 100%;
+  background-color: black;
+  text-align: center;
+}
+.video-page-wrapper iframe {
+  position: relative;
+  top: 5%;
+}
+.video-page-wrapper h3 {
+  color: white;
+  font-size: 1.05em;
+  margin-top: 4.75%;
+}
+.x-right {
+  width: 15px;
+  height: 22.5px;
+  background-color: transparent;
+  border-right: 3.5px solid white;
+  position: fixed;
+  left: 95.6%;
+  bottom: 94%;
+  box-sizing: border-box;
+  transform: rotate(45deg);
+  cursor: pointer;
+}
+.x-left {
+  width: 15px;
+  height: 22.5px;
+  background-color: transparent;
+  border-left: 3.5px solid white;
+  position: fixed;
+  left: 96.05%;
+  bottom: 94%;
+  box-sizing: border-box;
+  transform: rotate(-45deg);
+  cursor: pointer;
+}

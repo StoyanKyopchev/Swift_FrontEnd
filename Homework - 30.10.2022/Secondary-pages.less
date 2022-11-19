@@ -1,0 +1,574 @@
+@font-face {
+    font-family: "Custom font";
+    src: url("Fonts/D-DIN.woff") format("woff"), url("Fonts/D-DIN.woff2") format("woff2");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Custom font";
+    src: url("Fonts/D-DIN-Bold.woff") format("woff"), url("Fonts/D-DIN-Bold.woff2") format("woff2");
+    font-weight: 700;
+}
+
+@main-text-color: white;
+
+@links-and-border-color: darken(#d7d6d6, 30%);
+
+@links-hover-color: #9b9b9b;
+
+.container-size() {
+    height: 100vh;
+    width: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Custom font;
+    color: @main-text-color;
+}
+
+p {
+    font-weight: 400;
+    line-height: 1.85em;
+    font-size: 1em;
+}
+
+h2 {
+    font-size: 2.95em;
+    margin: 3.5% 0 12.5% 0;
+}
+
+h3 {
+    font-size: 1.25em;
+    margin: 0;
+}
+
+header {
+    padding: 1.4% 1.5% 0 15.5%;
+    position: fixed;
+    width: 100%;
+    background-color: #00000075;
+    z-index: 2;
+}
+
+.fill-white {
+    fill:white;
+}
+
+/* Navigation */
+
+.logo {
+    width: 215px;
+    display: inline-block;
+}
+
+#navigation {
+    display: inline-block;
+    margin-left: 1.75%;
+
+    a {
+        text-decoration: none;
+        color: @main-text-color;
+        font-size: 14px;
+        position: relative;
+
+        &::after {
+            content: "";
+            width: 0%;
+            height: 1px;
+            position: absolute;
+            top: 130%;
+            left: 0;
+            background-color: transparent;
+            transition: all 0.2s linear;
+        }
+
+        &:hover {
+            &::after {
+                width: 100%;
+                background-color: white;
+            }
+        }
+    }
+
+    ul {
+        padding-left: 0px;
+    }
+
+    li {
+        list-style-type: none;
+        display: inline;
+        margin: 0 12px;
+
+        &:first-child {
+            margin-left: 0;
+        }
+    }
+}
+
+.header-shop {
+    display: inline-block;
+    position: absolute;
+    left: 79.6%;
+    top: 57%;
+    text-decoration: none;
+    color: @main-text-color;
+    font-size: 14px;
+}
+
+/* Hamburger menu */
+
+#toggle {
+    display: none;
+}
+
+#hamburger-menu {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    left: 82.5%;
+    top: 57%;
+    cursor: pointer;
+    z-index: 1;
+
+    div {
+        width: 100%;
+        height: 2px;
+        background-color: white;
+        margin: 2px 0;
+        position: relative;
+        transition: all 0.2s linear;
+    }
+}
+
+#hamburger-menu-background {
+    position: fixed;
+    left: 81.5%;
+    top: 0;
+    width: 18.5%;
+    height: 100%;
+    background-color: black;
+    transform: scale(0);
+    transition: all 0.5s ease-in;
+}
+
+#hamburger-menu-navigation {
+    position: relative;
+    height: 100%;
+    width: 81%;
+    overflow: hidden;
+    left: 5%;
+    top: 6%;
+
+    nav {
+        text-align: right;
+
+        a {
+            display: block;
+            text-decoration: none;
+            color: @main-text-color;
+            border-bottom: 1px solid #61616187;
+            padding: 4.80% 0;
+            font-size: 1em;
+
+            &:hover {
+                color: @links-hover-color;
+            }
+        }
+    }
+
+    ul li {
+        list-style-type: none;
+    }
+}
+
+#toggle {
+    &:checked + #hamburger-menu {
+        .hamburger-top {
+            transform: rotate(-45deg);
+            top: 27%;
+        }
+        .hamburger-middle {
+            transform: rotate(45deg);
+            top: 3%;
+        }
+        .hamburger-bottom {
+            transform: rotate(45deg);
+            top: -21%;
+        }
+    }
+
+    &:checked + #hamburger-menu + #hamburger-menu-background {
+        transform: scale(1);
+    }
+}
+
+/* First stage - Overview */
+
+.inner-content {
+    background-image: url("Images/First-stage/First-stage-overview.webp");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    .container-size();
+    position: relative;
+}
+
+.overview-wrapper {
+    display: inline-block;
+    position: relative;
+    left: 15.75%;
+    top: 31.5%;
+}
+
+.inner-nav {
+    display: block;
+    margin-bottom: 8.5%;
+
+    a {
+        font-size: 1.15em;
+        text-decoration: none;
+        color: @links-and-border-color;
+        padding: 0 3%;
+
+        &:first-child {
+            padding-left: 0;
+        }
+
+        &:not(:nth-child(3)) {
+            border-right: 1px solid @links-and-border-color;
+        }
+
+        &:hover {
+            color: @main-text-color;
+        }
+
+        &:active {
+            color: @main-text-color;
+            text-decoration: underline;
+        }
+    }
+}
+
+.dot-links-wrapper {
+    display: inline-block;
+    width: 20%;
+    position: absolute;
+    left: 47.5%;
+    top: 94%;
+}
+
+.dot-links {
+    font-size: 1em;
+    text-decoration: none;
+    cursor: pointer;
+    margin-left: 1.5%;
+    color: #b4b4b4;
+}
+
+.third-page-prevbtn {
+    font-size: 3em;
+    background-color: transparent;
+    position: fixed;
+    top: 92%;
+    left: 2.75%;
+    cursor: pointer;
+    text-decoration: none;
+    color: @main-text-color;
+}
+
+.third-page-nextbtn {
+    font-size: 3em;
+    background-color: transparent;
+    position: fixed;
+    top: 92%;
+    left: 95.5%;
+    cursor: pointer;
+    text-decoration: none;
+    color: @main-text-color;
+}
+
+/* First stage - Engines */
+
+.inner-content-engines {
+    background-image: url("Images/First-stage/First-stage-engines.webp");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    .container-size();
+    position: relative;
+}
+
+.engines-wrapper {
+    width: 27%;
+    display: inline-block;
+    position: relative;
+    left: 15.75%;
+    top: 20%;
+
+    h2 {
+        margin: 3% 0 10% 0;
+    }
+}
+
+.inner-nav-engines {
+    display: block;
+    margin-bottom: 7%;
+
+    a {
+        font-size: 1.15em;
+        text-decoration: none;
+        color: @links-and-border-color;
+        padding: 0 3%;
+
+        &:first-child {
+            padding-left: 0;
+        }
+
+        &:not(:nth-child(3)) {
+            border-right: 1px solid @links-and-border-color;
+        }
+
+        &:hover {
+            color: @main-text-color;
+        }
+
+        &:active {
+            color: @main-text-color;
+            text-decoration: underline;
+        }
+    }
+}
+
+.secondary-pages-table {
+    width:100%;
+    border-collapse: collapse;
+    font-size: 1em;
+    margin-top: 6%;
+
+    td {
+        padding: 4% 0;
+        font-size: 0.875em;
+
+        &:nth-child(2) {
+            text-align: right;
+            font-size: 0.975em;
+        }
+    }
+
+    tr {
+        border-bottom: 1px solid #82808087;
+    }
+}
+
+.US-units {
+    color: #959595;
+}
+
+/* First stage - Landing legs */
+
+.inner-content-landing-legs {
+    background-image: url("Images/First-stage/First-stage-landing-legs.webp");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    .container-size();
+    position: relative;
+}
+
+.landing-legs-wrapper {
+    display: inline-block;
+    position: relative;
+    left: 15.75%;
+    top: 27.5%;
+
+    >a {
+        text-decoration: none;
+        color: @main-text-color;
+        display: inline-block;
+        margin-top: 1.5%;
+    }
+}
+
+/* Second stage */
+
+.inner-content-second-stage {
+    background-image: url("Images/Second stage.webp");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    .container-size();
+    position: relative;
+}
+
+.second-stage-wrapper {
+    width: 27%;
+    display: inline-block;
+    position: relative;
+    left: 15.75%;
+    top: 26.5%;
+
+    h2 {
+        margin: 3% 0 4% 0;
+    }
+}
+
+/* Interstage */
+
+.inner-content-interstage {
+    background-image: url("Images/Interstage.webp");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    .container-size();
+    position: relative;
+}
+
+.interstage-wrapper {
+    display: inline-block;
+    position: relative;
+    left: 15.75%;
+    top: 31.5%;
+
+    h2 {
+        margin: 3% 0 5% 0;
+    }
+
+    h4 {
+        font-size: 1.20em;
+        margin: 5% 0;
+    }
+}
+
+/* Payload */
+
+.inner-content-payload-fairing {
+    background-image: url("Images/Payload/Payload-fairing.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    .container-size();
+    position: relative;
+}
+
+.payload-fairing-wrapper {
+    width: 27%;
+    display: inline-block;
+    position: relative;
+    left: 15.75%;
+    top: 26.5%;
+
+    h2 {
+        margin: 3% 0 10% 0;
+    }
+
+    p {
+        margin-bottom: 0;
+    }
+}
+
+.inner-nav-payload {
+    display: block;
+    margin-bottom: 7%;
+
+    a {
+        font-size: 1.15em;
+        text-decoration: none;
+        color: @links-and-border-color;
+        padding: 0 3%;
+
+        &:first-child {
+            padding-left: 0;
+        }
+
+        &:not(:nth-child(2)) {
+            border-right: 1px solid @links-and-border-color;
+        }
+
+        &:hover {
+            color: @main-text-color;
+        }
+
+        &:active {
+            color: @main-text-color;
+            text-decoration: underline;
+        }
+    }
+}
+
+.inner-content-payload-dragon {
+    background-image: url("Images/Payload/Payload-dragon.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    .container-size();
+    position: relative;
+}
+
+.payload-dragon-wrapper {
+    width: 27%;
+    display: inline-block;
+    position: relative;
+    left: 15.75%;
+    top: 24.5%;
+
+    h2 {
+        margin: 2.5% 0 10% 0;
+    }
+
+    p {
+        margin-bottom: 0;
+    }
+
+    >a {
+        text-decoration: none;
+        color: @main-text-color;
+        display: inline-block;
+        margin-top: 4%;
+    }
+}
+
+/* Video Page */
+
+.video-page-wrapper {
+    .container-size ();
+    background-color: black;
+    text-align: center;
+
+    iframe {
+        position: relative;
+        top: 5%;
+    }
+
+    h3 {
+        color: @main-text-color;
+        font-size: 1.05em;
+        margin-top: 4.75%;
+    }
+}
+
+.x-right {
+    width: 15px;
+    height: 22.5px;
+    background-color: transparent;
+    border-right: 3.5px solid white;
+    position: fixed;
+    left: 95.60%;
+    bottom: 94%;
+    box-sizing: border-box;
+    transform: rotate(45deg);
+    cursor: pointer;
+}
+
+.x-left {
+    width: 15px;
+    height: 22.5px;
+    background-color: transparent;
+    border-left: 3.5px solid white;
+    position: fixed;
+    left: 96.05%;
+    bottom: 94%;
+    box-sizing: border-box;
+    transform: rotate(-45deg);
+    cursor: pointer;
+}

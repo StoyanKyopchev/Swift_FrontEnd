@@ -1,6 +1,5 @@
 var accordionContentArr;
 var i;
-var isButtonClicked = true;
 
 function expand(number) {
 

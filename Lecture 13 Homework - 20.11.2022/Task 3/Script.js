@@ -26,24 +26,3 @@ for(j = 0; ; j++) {
 }
 
 console.log("Sorted: " + numbers);
-
-
-
-
-
-
-
-/*for(i = 0; i < numbers.length; i++) {
-
-    if(lowestNumber > numbers[i]) {
-        lowestNumber = numbers[i];
-        tempIndex = i;
-    }
-    
-}
-
-numbers.splice(tempIndex, 1);
-
-numbersSorted.push(lowestNumber);
-
-console.log(numbersSorted); */

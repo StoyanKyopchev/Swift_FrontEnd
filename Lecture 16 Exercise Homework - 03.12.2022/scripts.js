@@ -3,7 +3,6 @@ var editAsideButton = document.querySelector(".EditPageButton");
 editAsideButton.addEventListener("click", navExpand);
 
 var addPersonBtn = document.getElementById("AddOnePerson");
-//addPersonBtn.addEventListener("click", addCard);  - moved to navExpand()
 
 function navExpand() {
     var editAsideExpand = document.querySelector(".EditPeopleWrapper");

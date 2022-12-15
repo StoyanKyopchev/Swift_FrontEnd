@@ -20,21 +20,6 @@ var peopleArr = [],
         sideMenu.classList.toggle("EditPeopleWrapper--expanded");
     }
 
-    /*function asideExpand() {
-        editButton.classList.add("hideElements");
-        stopEditingButton.classList.remove("hideElements");
-        stopEditingButton.classList.add("EditPageButton--active");
-        addPersonButton.classList.remove("hideElements");
-        saveButton.classList.add("hideElements");
-        sideMenu.classList.add("EditPeopleWrapper--expanded");
-    }
-
-    function asideCollapse() {
-        editButton.classList.remove("hideElements");
-        stopEditingButton.classList.add("hideElements");
-        sideMenu.classList.remove("EditPeopleWrapper--expanded");
-    } */
-
     function addPersonBtnClick() {
         var person = getFormValues();
         peopleArr.push(person);
@@ -42,8 +27,6 @@ var peopleArr = [],
         addCard(person);
         clearForm();
     }
-
-    // Функция, която взима данните от формуляра и ги записва в обекта person
 
     function getFormValues() {
         var person = {};
@@ -134,5 +117,3 @@ var peopleArr = [],
         clearForm();
         buttonsWrapper.classList.remove("buttonsWrapper--edit");
     }
-
-    // За delete бутона ще трябва когато се изтрие даден обект да се пренареждат и id-тата в масива peopleArr!

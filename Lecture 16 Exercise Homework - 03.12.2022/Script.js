@@ -26,6 +26,7 @@ var peopleArr = [],
 
         addCard(person);
         clearForm();
+        cardsPlaceholder.classList.add("PeopleCardsContainer--hidden");
     }
 
     function getFormValues() {

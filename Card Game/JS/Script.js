@@ -58,13 +58,6 @@ restartGameButton.classList.remove("hidden");
 cardsWrapper.classList.remove("hidden");
 }
 
-/* Променливата cardFrontImages = doubleFrontImages; се създава с цел да променяш (разбъркваш) променливата
-cardFrontImages, а оригиналния масив, който е в doubleFrontImages да си остава подреден и да не го пипаш!
-Трябва return преди Math.random, защото му казваш върни ми резултата от тази операция(Math.random), а без return то просто ще извърши
-Math.random() - 0.5 и дотам, а с return ще ти върне тази стойност и ще може да я ползва за .sort После имаш return cardFrontImages по
-същата логика, то извъшрва операцията Math.random, връща ти рандъм числото и после извършва операцията cardFrontImages.sort и ти
-разбърква масива. И по същата логика го разбърква и дотам, разбъркания масив си остава в тази функция само и, за да може да го ползваш
-в друга функция трябва да му кажеш return cardFrontImages и така вече ще ти запази и връща разбъркания масив*/
 function shuffle() {
 var cardFrontImages = doubleFrontImages;
 cardFrontImages.sort(function(){
@@ -75,10 +68,7 @@ return cardFrontImages;
 
 function cardGenerator() {
 var cardFrontImages = shuffle();
-/* Долния ред казва следното: Изпълни ми функция(без име, защото браузъра си я извиква всеки път чрез .forEach все
-едно имаш цикъл, който се изпълнява докато не мине всички елементи) за всеки елемент от масива cardFrontImages и 
-функцията трябва да приема параметър item, което реално ти е всеки един обект от масива, за да може да вземеш
-source за лицето на картите */
+
 cardFrontImages.forEach(function(item) {
     var card = document.createElement("div"),
         cardFront = document.createElement("img"),
